@@ -3,14 +3,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'ProductSans', 'Inter', 'Segoe UI';
+  font-family: 'Inter', 'ProductSans', 'Segoe UI';
   font-weight: normal;
   border: none;
   overflow: auto;
+  box-shadow: none;
 }
 
 p {
   font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ProductSans';
 }
 
 button {
@@ -27,11 +32,43 @@ textarea {
   overflow: hidden;
   height: 3rem;
   width: 50rem;
-  padding: 10px 20px;
+  padding: 15px 20px 10px 20px;
   border-radius: 10px;
-  font-size: 18px;
-  background-color: var(--surface-top-color);
+  font-size: 16px;
+  background-color: transparent;
   color: var(--foreground-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  opacity: 1;
+}
+
+// Fonts
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('assets/fonts/ProductSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
 }
 
 // Colors
@@ -131,48 +168,25 @@ body {
   --secondary-color: #0bddb0;
 }
 
-.home-header {
-  width: 100%;
-  padding: 1rem;
-  background-color: #2d2d2d;
-}
+// .message {
+//   padding: 1rem;
+//   margin-bottom: 10px;
+//   border-radius: 10px;
+// }
 
-.home-title {
-  padding: 0;
-}
+// .message.user {
+//   background-color: var(--primary-color);
+//   color: #ffffff;
+// }
 
-.input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center;
-  width: 100%;
-}
+// .message.ai {
+//   background-color: var(--surface-color);
+// }
 
-.prompt-textarea {
-  margin-right: 2rem;
-  flex: 1;
-}
-
-.message {
-  padding: 1rem;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-.message.user {
-  background-color: var(--primary-color);
-  color: #ffffff;
-}
-
-.message.ai {
-  background-color: var(--surface-color);
-}
-
-.message.system {
-  background-color: var(--background-color);
-  color: #1a99c0;
-}
+// .message.system {
+//   background-color: var(--background-color);
+//   color: #1a99c0;
+// }
 
 // Markdown styling
 markdown {

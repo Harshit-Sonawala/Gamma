@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('../assets/fonts/ProductSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('../assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
 :root {
   --background-color: #1d1d1d;
   --surface-color: #222222;
@@ -23,11 +43,15 @@
   justify-content: stretch;
   align-items: center;
   width: 100%;
+  padding: 10px;
+  background-color: var(--surface-top-color);
+  border-radius: 10px;
 }
 
 .prompt-textarea {
   margin-right: 2rem;
   flex: 1;
+  flex-grow: 1;
 }
 
 .message {
@@ -47,5 +71,8 @@
 
 .message.system {
   background-color: var(--background-color);
-  color: #1a99c0;
+  font-family: 'ProductSans';
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px; 
 }
