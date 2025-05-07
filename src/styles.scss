@@ -1,1 +1,285 @@
-/* You can add global styles to this file, and also import other style files */
+// Resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'ProductSans', 'Inter', 'Segoe UI';
+  font-weight: normal;
+  border: none;
+  overflow: auto;
+}
+
+p {
+  font-size: 16px;
+}
+
+button {
+  min-width: 8rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: var(--foreground-color);
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  height: 3rem;
+  width: 50rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: var(--surface-top-color);
+  color: var(--foreground-color);
+}
+
+// Colors
+:root {
+  --background-color: #1d1d1d;
+  --surface-color: #222222;
+  --surface-top-color: #333333;
+  --foreground-color: #f4f4f4;
+  --primary-color: #1a99c0;
+  --secondary-color: #0bddb0;
+}
+
+.fg-primary {
+  color: var(--primary-color);
+}
+
+.bg-surface {
+  background-color: var(--surface-color);
+}
+
+body {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+// Layouts
+.pd-v-sm {
+  padding: 1rem 0;
+}
+
+.pd-v-md {
+  padding: 3rem 0;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ninety-perc {
+  width: 90%;
+  margin: auto;
+}
+
+.debug-r {
+  border: 1px solid #dd4119;
+}
+
+.debug-g {
+  border: 1px solid #0bddb0;
+}
+
+.debug-b {
+  border: 1px solid #1a99c0;
+}
+
+// markdown {
+//   font-family: sans-serif;
+// }
+
+// markdown h1, markdown h2, markdown h3 {
+//   font-weight: bold;
+//   margin-top: 1em;
+// }
+
+// markdown strong {
+//   font-weight: bold;
+// }
+
+// markdown code {
+//   font-family: monospace;
+//   background: #eee;
+//   padding: 0.2em 0.4em;
+//   border-radius: 3px;
+// }
+
+:root {
+  --background-color: #1d1d1d;
+  --surface-color: #222222;
+  --surface-top-color: #333333;
+  --foreground-color: #f4f4f4;
+  --primary-color: #1a99c0;
+  --secondary-color: #0bddb0;
+}
+
+.home-header {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2d2d2d;
+}
+
+.home-title {
+  padding: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+}
+
+.prompt-textarea {
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.message {
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.message.user {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.message.ai {
+  background-color: var(--surface-color);
+}
+
+.message.system {
+  background-color: var(--background-color);
+  color: #1a99c0;
+}
+
+// Markdown styling
+markdown {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+// Headings
+markdown h1, markdown h2, markdown h3, markdown h4, markdown h5, markdown h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+// Bold and italic
+markdown strong {
+  font-weight: bold;
+  color: var(--foreground-color);
+}
+markdown em {
+  font-style: italic;
+  color: var(--foreground-color);
+}
+
+// Blockquotes
+markdown blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: #ccc;
+}
+
+// Inline code
+markdown code {
+  background-color: var(--surface-top-color);
+  color: var(--secondary-color);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95em;
+}
+
+// Code blocks
+markdown pre {
+  background-color: var(--surface-top-color);
+  color: var(--foreground-color);
+  padding: 1em;
+  margin: 1em;
+  overflow-x: auto;
+  border-radius: 10px;
+  line-height: 1em;
+}
+markdown pre code {
+  background: none;
+  color: inherit;
+  font-size: 0.95em;
+  line-height: 1em;
+}
+
+// Links
+markdown a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+// Lists
+markdown ul{
+  padding-left: 1em;
+  list-style-type: disc;
+}
+
+markdown ol {
+  padding-left: 1em;
+  list-style-type: decimal;
+}
+
+markdown li {
+  margin: 0.25em 0;
+}
+
+// Tables
+markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+markdown th, markdown td {
+  border: 1px solid var(--surface-top-color);
+  padding: 0.5em;
+  text-align: left;
+  background-color: var(--surface-color);
+  color: var(--foreground-color);
+}
+
+// Horizontal rule
+markdown hr {
+  border: none;
+  border-top: 1px solid var(--surface-top-color);
+  margin: 2em 0;
+}
+
+// Images
+markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
