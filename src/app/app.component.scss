@@ -70,9 +70,17 @@
 }
 
 .message.system {
-  background-color: var(--background-color);
-  font-family: 'ProductSans';
-  color: var(--secondary-color);
+  color: #22d4ae;
   border: 1px solid var(--secondary-color);
   border-radius: 10px; 
+}
+
+.message.system p {
+  font-family: 'ProductSans';
+  font-size: 19px;
+}
+
+.message-title {
+  margin-bottom: 5px;
+  width: 60px;
 }
