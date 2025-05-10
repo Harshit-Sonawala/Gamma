@@ -25,6 +25,7 @@
   --foreground-color: #f4f4f4;
   --primary-color: #1a99c0;
   --secondary-color: #0bddb0;
+  --tertiary-color: #113953;
 }
 
 .home-header {
@@ -49,7 +50,6 @@
 }
 
 .prompt-textarea {
-  margin-right: 2rem;
   flex: 1;
   flex-grow: 1;
 }
@@ -70,7 +70,7 @@
 }
 
 .message.system {
-  color: #22d4ae;
+  color: var(--secondary-color); 
   border: 1px solid var(--secondary-color);
   border-radius: 10px; 
 }
@@ -81,6 +81,6 @@
 }
 
 .message-title {
-  margin-bottom: 5px;
-  width: 60px;
+  margin: 5px 0;
+  width: 100px;
 }

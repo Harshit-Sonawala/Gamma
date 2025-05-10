@@ -71,6 +71,18 @@ textarea::placeholder {
   font-weight: normal;
 }
 
+// Icons
+@import 'material-symbols/rounded.css';
+
+.material-symbols-rounded {
+  font-size: 32px;
+  font-variation-settings:
+  'FILL' 1,  /* Set FILL to 1 for the filled appearance */
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
 // Colors
 :root {
   --background-color: #1d1d1d;
@@ -79,10 +91,19 @@ textarea::placeholder {
   --foreground-color: #f4f4f4;
   --primary-color: #1a99c0;
   --secondary-color: #0bddb0;
+  --tertiary-color: #113953;
 }
 
 .fg-primary {
   color: var(--primary-color);
+}
+
+.fg-secondary {
+  color: var(--secondary-color);
+}
+
+.fg-tertiary {
+  color: var(--tertiary-color);
 }
 
 .bg-surface {
@@ -103,6 +124,10 @@ body {
   padding: 3rem 0;
 }
 
+.mg-r-sm {
+  margin-right: 5px;
+}
+
 .center {
   justify-content: center;
   align-items: center;
@@ -118,7 +143,7 @@ body {
 .flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
 }
 
@@ -139,25 +164,6 @@ body {
   border: 1px solid #1a99c0;
 }
 
-// markdown {
-//   font-family: sans-serif;
-// }
-
-// markdown h1, markdown h2, markdown h3 {
-//   font-weight: bold;
-//   margin-top: 1em;
-// }
-
-// markdown strong {
-//   font-weight: bold;
-// }
-
-// markdown code {
-//   font-family: monospace;
-//   background: #eee;
-//   padding: 0.2em 0.4em;
-//   border-radius: 3px;
-// }
 
 :root {
   --background-color: #1d1d1d;
@@ -167,26 +173,6 @@ body {
   --primary-color: #1a99c0;
   --secondary-color: #0bddb0;
 }
-
-// .message {
-//   padding: 1rem;
-//   margin-bottom: 10px;
-//   border-radius: 10px;
-// }
-
-// .message.user {
-//   background-color: var(--primary-color);
-//   color: #ffffff;
-// }
-
-// .message.ai {
-//   background-color: var(--surface-color);
-// }
-
-// .message.system {
-//   background-color: var(--background-color);
-//   color: #1a99c0;
-// }
 
 // Markdown styling
 markdown {

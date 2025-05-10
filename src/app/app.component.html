@@ -12,10 +12,16 @@
       @for (message of messages; track message) {
         <div [ngClass]="message.sender" class="message bg-surface">
           @if (message.sender === 'ai') {
-            <h3 class="message-title">AI</h3>
+            <div class="flex-row">
+              <span class="material-symbols-rounded mg-r-sm fg-secondary">network_intelligence</span>
+              <h2 class="message-title fg-secondary">Gamma</h2>
+            </div>
             <markdown [data]="message.text"></markdown>
           } @else {
-            <h3 class="message-title">You</h3>
+            <div class="flex-row">
+              <span class="material-symbols-rounded mg-r-sm fg-tertiary">account_circle</span>
+              <h2 class="message-title fg-tertiary">You</h2>
+            </div>
             <p>
               {{ message.text }}
             </p>
