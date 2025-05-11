@@ -1,6 +1,11 @@
 <div class="flex-col">
   <div class="home-header">
-    <h1 class="fg-primary ninety-perc">Gamma</h1>
+    <div class="ninety-perc">
+      <div class="flex-row">
+        <span class="material-symbols-rounded mg-r-sm fg-primary">network_intelligence</span>
+        <h1 class="fg-primary">Gamma</h1>
+      </div>
+    </div>
   </div>
   <div class="ninety-perc flex-col">
     <p class="pd-v-sm">Talk to gemma3:1b with a fast Angular Frontend.</p>
@@ -12,15 +17,15 @@
       @for (message of messages; track message) {
         <div [ngClass]="message.sender" class="message bg-surface">
           @if (message.sender === 'ai') {
-            <div class="flex-row">
+            <div class="message-title flex-row">
               <span class="material-symbols-rounded mg-r-sm fg-secondary">network_intelligence</span>
-              <h2 class="message-title fg-secondary">Gamma</h2>
+              <h2 class="fg-secondary">Gamma</h2>
             </div>
             <markdown [data]="message.text"></markdown>
           } @else {
-            <div class="flex-row">
-              <span class="material-symbols-rounded mg-r-sm fg-tertiary">account_circle</span>
-              <h2 class="message-title fg-tertiary">You</h2>
+            <div class="message-title flex-row">
+              <span class="material-symbols-rounded mg-r-sm fg-primary">account_circle</span>
+              <h2 class="fg-primary">You</h2>
             </div>
             <p>
               {{ message.text }}
