@@ -1,18 +1,20 @@
 <div class="flex-col">
   <div class="home-header">
-    <div class="ninety-perc">
-      <div class="flex-row">
-        <span class="material-symbols-rounded mg-r-sm fg-primary">network_intelligence</span>
-        <h1 class="fg-primary">Gamma</h1>
-      </div>
+    <div class="ninety-perc flex-row">
+      <span class="material-symbols-rounded mg-r-sm fg-primary">network_intelligence</span>
+      <h1 class="fg-primary">Gamma</h1>
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="prompt-bar">
+      <textarea [(ngModel)]="userInput" placeholder="Enter message..."></textarea>
+      <button (click)="sendMessage()" [disabled]="isLoading" class="flex-row center">
+        Send
+        <span class="material-symbols-rounded mg-l-sm">send</span>
+      </button>
     </div>
   </div>
   <div class="ninety-perc flex-col">
-    <p class="pd-v-sm">Talk to gemma3:1b with a fast Angular Frontend.</p>
-    <div class="input-container">
-      <textarea class="prompt-textarea" [(ngModel)]="userInput" placeholder="Enter message..."></textarea>
-      <button (click)="sendMessage()" [disabled]="isLoading">Send</button>
-    </div>
     <div class="chat-container pd-v-sm flex-col">
       @for (message of messages; track message) {
         <div [ngClass]="message.sender" class="message bg-surface">

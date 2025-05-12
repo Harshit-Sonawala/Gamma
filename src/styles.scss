@@ -1,55 +1,3 @@
-// Resets
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', 'ProductSans', 'Segoe UI';
-  font-weight: normal;
-  border: none;
-  overflow: auto;
-  box-shadow: none;
-}
-
-p {
-  font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'ProductSans';
-}
-
-button {
-  min-width: 8rem;
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  font-size: 18px;
-  background-color: var(--primary-color);
-  color: var(--foreground-color);
-}
-
-textarea {
-  resize: none;
-  overflow: hidden;
-  height: 3rem;
-  width: 50rem;
-  padding: 15px 20px 10px 20px;
-  border-radius: 10px;
-  font-size: 16px;
-  background-color: transparent;
-  color: var(--foreground-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-textarea:focus {
-  outline: none;
-}
-
-textarea::placeholder {
-  opacity: 1;
-}
-
 // Fonts
 @font-face {
   font-family: 'Inter';
@@ -91,7 +39,7 @@ textarea::placeholder {
   --foreground-color: #f4f4f4;
   --primary-color: #33bce6;
   --secondary-color: #0bddb0;
-  --tertiary-color: #113953;
+  --tertiary-color: #122a3a;
 }
 
 .fg-primary {
@@ -110,6 +58,63 @@ textarea::placeholder {
   background-color: var(--surface-color);
 }
 
+// Resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'ProductSans', 'Segoe UI';
+  font-weight: normal;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ProductSans';
+}
+
+button {
+  min-width: 8rem;
+  border-radius: 100px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  height: 3rem;
+  width: 50rem;
+  padding: 15px 20px 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--foreground-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  opacity: 1;
+}
+
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
@@ -124,8 +129,20 @@ body {
   padding: 3rem 0;
 }
 
+.mg-v-md {
+  margin: 2rem 0;
+}
+
 .mg-r-sm {
-  margin-right: 5px;
+  margin-right: 8px;
+}
+
+.mg-l-sm {
+  margin-left: 8px;
+}
+
+.mg-r-lg {
+  margin-right: 200px;
 }
 
 .center {
@@ -162,16 +179,6 @@ body {
 
 .debug-b {
   border: 1px solid #1a99c0;
-}
-
-
-:root {
-  --background-color: #1d1d1d;
-  --surface-color: #222222;
-  --surface-top-color: #333333;
-  --foreground-color: #f4f4f4;
-  --primary-color: #1a99c0;
-  --secondary-color: #0bddb0;
 }
 
 // Markdown styling

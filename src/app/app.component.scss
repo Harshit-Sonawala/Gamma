@@ -25,13 +25,13 @@
   --foreground-color: #f4f4f4;
   --primary-color: #33bce6;
   --secondary-color: #0bddb0;
-  --tertiary-color: #113953;
+  --tertiary-color: #0f2635;
 }
 
 .home-header {
   width: 100%;
   padding: 1rem;
-  background-color: #2d2d2d;
+  background-color: var(--surface-color);
 }
 
 .home-title {
@@ -39,23 +39,31 @@
 }
 
 .input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center;
+  padding: 1.5rem;
   width: 100%;
-  padding: 10px;
-  background-color: var(--surface-top-color);
-  border-radius: 10px;
 }
 
-.prompt-textarea {
+.prompt-bar {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.5rem;
+  margin: auto;
+  background-color: var(--surface-top-color);
+  border-radius: 100px;
+}
+
+.prompt-bar textarea {
   flex: 1;
   flex-grow: 1;
 }
 
+.prompt-bar button {
+  padding: 0 1rem;
+}
+
 .message {
-  padding: 1.5rem;
+  padding: 0.5rem 0.8rem;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -65,8 +73,6 @@
   color: var(--foreground-color);
 }
 
-.message.user 
-
 .message.ai {
   background-color: var(--surface-color);
 }
@@ -75,6 +81,7 @@
   color: var(--secondary-color); 
   border: 1px solid var(--secondary-color);
   border-radius: 10px; 
+  align-self: center;
 }
 
 .message.system p {
@@ -83,5 +90,5 @@
 }
 
 .message-title {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
 }
