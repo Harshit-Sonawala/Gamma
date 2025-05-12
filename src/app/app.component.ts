@@ -61,7 +61,10 @@ export class AppComponent {
       next: (chunk) => {
         aiMessage.text += chunk;
       },
-      complete: () => (this.isLoading = false),
+      complete: () => {
+        this.isLoading = false;
+        console.log('Response: ', aiMessage.text);
+      },
       error: (err) => {
         console.error(err);
         this.isLoading = false;

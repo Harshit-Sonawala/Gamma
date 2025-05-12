@@ -66,7 +66,7 @@
   font-family: 'Inter', 'ProductSans', 'Segoe UI';
   font-weight: normal;
   border: none;
-  overflow: hidden;
+  // overflow: hidden;
   box-shadow: none;
   transition: all 100ms;
 }
@@ -188,8 +188,7 @@ markdown {
 
 // Headings
 markdown h1, markdown h2, markdown h3, markdown h4, markdown h5, markdown h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin: 1em 0 0.5em 0;
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -198,10 +197,13 @@ markdown h1, markdown h2, markdown h3, markdown h4, markdown h5, markdown h6 {
 markdown strong {
   font-weight: bold;
   color: var(--foreground-color);
+  margin: 1em 0;
 }
+
 markdown em {
   font-style: italic;
   color: var(--foreground-color);
+  margin: 1em 0;
 }
 
 // Blockquotes
@@ -249,11 +251,13 @@ markdown a {
 markdown ul{
   padding-left: 1.5em;
   list-style-type: disc;
+  margin: 0.8em 0;
 }
 
 markdown ol {
   padding-left: 1.5em;
   list-style-type: decimal;
+  margin: 0.8em 0;
 }
 
 markdown li {
