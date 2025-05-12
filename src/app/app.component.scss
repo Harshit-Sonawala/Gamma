@@ -1,32 +1,32 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Inter';
+//   src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'ProductSans';
-  src: url('../assets/fonts/ProductSans-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'ProductSans';
+//   src: url('../assets/fonts/ProductSans-Regular.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'RobotoMono';
-  src: url('../assets/fonts/RobotoMono-Regular.ttf') format('truetype');
-  font-weight: normal;
-}
+// @font-face {
+//   font-family: 'RobotoMono';
+//   src: url('../assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+//   font-weight: normal;
+// }
 
-:root {
-  --background-color: #1d1d1d;
-  --surface-color: #222222;
-  --surface-top-color: #333333;
-  --foreground-color: #f4f4f4;
-  --primary-color: #33bce6;
-  --secondary-color: #0bddb0;
-  --tertiary-color: #0f2635;
-}
+// :root {
+//   --background-color: #1d1d1d;
+//   --surface-color: #222222;
+//   --surface-top-color: #333333;
+//   --foreground-color: #f4f4f4;
+//   --primary-color: #33bce6;
+//   --secondary-color: #0bddb0;
+//   --tertiary-color: #1a384dcb;
+// }
 
 .home-header {
   width: 100%;
@@ -39,15 +39,11 @@
 }
 
 .input-container {
-  padding: 1.5rem;
-  width: 100%;
+  padding: 1rem 0;
 }
 
 .prompt-bar {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  padding: 0 0.5rem;
+  padding: 0.3rem;
   margin: auto;
   background-color: var(--surface-top-color);
   border-radius: 100px;
@@ -55,17 +51,31 @@
 
 .prompt-bar textarea {
   flex: 1;
-  flex-grow: 1;
+  height: 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .prompt-bar button {
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+}
+
+.prompt-bar span {
+  font-size: 24px;
+}
+
+.chat-container {
+  overflow: scroll;
 }
 
 .message {
-  padding: 0.5rem 0.8rem;
+  padding: 1rem;
   margin-bottom: 10px;
   border-radius: 10px;
+}
+
+.message-title {
+  margin-bottom: 0.5rem;
 }
 
 .message.user {
@@ -78,10 +88,11 @@
 }
 
 .message.system {
-  color: var(--secondary-color); 
-  border: 1px solid var(--secondary-color);
-  border-radius: 10px; 
   align-self: center;
+  padding: 0.8rem;
+  color: var(--secondary-color); 
+  // border: 1px solid var(--secondary-color);
+  // border-radius: 10px; 
 }
 
 .message.system p {
@@ -89,6 +100,3 @@
   font-size: 19px;
 }
 
-.message-title {
-  margin: 0 0 10px 0;
-}

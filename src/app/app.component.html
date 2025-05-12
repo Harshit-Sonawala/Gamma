@@ -5,23 +5,30 @@
       <h1 class="fg-primary">Gamma</h1>
     </div>
   </div>
-  <div class="input-container">
-    <div class="prompt-bar">
-      <textarea [(ngModel)]="userInput" placeholder="Enter message..."></textarea>
-      <button (click)="sendMessage()" [disabled]="isLoading" class="flex-row center">
-        Send
-        <span class="material-symbols-rounded mg-l-sm">send</span>
+  <div class="input-container ninety-perc">
+    <div class="prompt-bar flex-row center">
+      <textarea [(ngModel)]="userInput" class="mg-r-sm" placeholder="Enter message..."></textarea>
+      <button (click)="sendMessage()" [disabled]="isLoading">
+        <div class="flex-row center">
+          Send
+          <span class="material-symbols-rounded mg-l-sm">send</span>
+        </div>
       </button>
     </div>
   </div>
   <div class="ninety-perc flex-col">
-    <div class="chat-container pd-v-sm flex-col">
+    <div class="chat-container flex-col">
       @for (message of messages; track message) {
         <div [ngClass]="message.sender" class="message bg-surface">
           @if (message.sender === 'ai') {
             <div class="message-title flex-row">
               <span class="material-symbols-rounded mg-r-sm fg-secondary">network_intelligence</span>
-              <h2 class="fg-secondary">Gamma</h2>
+              <h2 class="fg-secondary mg-r-sm">Gamma</h2>
+              @if (isLoading) {
+                <div class="message system">
+                <p>Thinking...</p>
+                </div>
+              } 
             </div>
             <markdown [data]="message.text"></markdown>
           } @else {
@@ -38,13 +45,7 @@
         <div class="message system">
           <p>Send a message to start the conversation.</p>
         </div>
-      }
-
-      @if (isLoading) {
-        <div class="message system">
-          <p>Thinking...</p>
-        </div>
-      }      
+      }         
     </div>
   </div>
 </div>

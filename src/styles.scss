@@ -39,7 +39,7 @@
   --foreground-color: #f4f4f4;
   --primary-color: #33bce6;
   --secondary-color: #0bddb0;
-  --tertiary-color: #122a3a;
+  --tertiary-color: #1a2b3b;
 }
 
 .fg-primary {
@@ -68,6 +68,7 @@
   border: none;
   overflow: hidden;
   box-shadow: none;
+  transition: all 100ms;
 }
 
 p {
@@ -79,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-  min-width: 8rem;
+// min-width: 8rem;
   border-radius: 100px;
   background-color: var(--tertiary-color);
   color: var(--primary-color);
@@ -89,22 +90,18 @@ button {
 
 button:hover {
   background-color: var(--primary-color);
-  color: var(--tertiary-color);
+  color: var(--foreground-color);
 }
 
 textarea {
   resize: none;
-  overflow: hidden;
-  height: 3rem;
-  width: 50rem;
-  padding: 15px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   font-size: 16px;
   background-color: transparent;
   color: var(--foreground-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 textarea:focus {
@@ -281,7 +278,7 @@ markdown th, markdown td {
 markdown hr {
   border: none;
   border-top: 1px solid var(--surface-top-color);
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 // Images

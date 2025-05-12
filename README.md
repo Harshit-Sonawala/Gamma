@@ -8,7 +8,7 @@ Talk to gemma3:1b with a fast Angular Frontend.
 - [ ] Prompt Templates
 - [ ] Temperature Control
 - [ ] Custom modelfile creation
-- [ ] Stream LLM Response
+- [x] Stream LLM Response
 - [ ] Clear inputs
 - [ ] Download/share/copy-paste text
 
