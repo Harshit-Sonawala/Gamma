@@ -9,8 +9,9 @@ Talk to gemma3:1b with a fast Angular Frontend.
 - [ ] Temperature Control
 - [ ] Custom modelfile creation
 - [x] Stream LLM Response
-- [ ] Clear inputs
 - [ ] Download/share/copy-paste text
+- [ ] Multi-modal inputs with Llava
+- [ ] Embedding models and RAG?
 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.

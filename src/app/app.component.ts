@@ -57,7 +57,7 @@ export class AppComponent {
 
     let aiMessage: Message = { sender: 'ai', text: '' };
     this.messages.push(aiMessage);
-    this.ollamaService.streamResponse(currentInput).subscribe({
+    this.ollamaService.streamResponse(currentInput, 'gemma3:1b').subscribe({
       next: (chunk) => {
         aiMessage.text += chunk;
       },
